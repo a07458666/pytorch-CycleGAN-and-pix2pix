@@ -1,4 +1,30 @@
 
+## Dataset Preprocessing
+
+-- ./datasets/polyp/testA  <br>
+-- ./datasets/polyp/testB  <br>
+
+## Train sim to real
+
+```bash
+python3 train.py --dataroot <dataset dir> --name  <project name> --model cycle_gan --gpu_ids <gpu> --load_size 512 --crop_size 480 --display_winsize 512
+```
+
+## Test sim to real
+
+- Then generate the results using
+```bash
+python3 test.py --dataroot <dataset dir> --name <project name> --model cycle_gan  --load_size 512 --crop_size 480 --display_winsize 512
+```
+
+output path 
+-- ./result/
+
+## visualization
+
+[Result.ipynb](https://github.com/a07458666/Monocular-Depth-Estimation-Toolbox/blob/main/Result.ipynb)
+
+
 <img src='imgs/horse2zebra.gif' align="right" width=384>
 
 <br><br><br>
