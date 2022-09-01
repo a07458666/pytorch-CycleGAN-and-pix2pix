@@ -42,5 +42,5 @@ test/data/legacy_serialized.pt
 *~
 .idea
 
+#Ignore Wandb
 wandb/
-cycleGAN512.zip
