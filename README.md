@@ -17,6 +17,15 @@ python3 train.py --dataroot <dataset dir> --name  <project name> --model cycle_g
 python3 test.py --dataroot <dataset dir> --name <project name> --model cycle_gan  --load_size 512 --crop_size 480 --display_winsize 512
 ```
 
+Test a CycleGAN model (one side only):
+```bash
+python3 test.py --dataroot <dataset dir>/trainA --name <project name> --model test --no_dropout  --load_size 512 --crop_size 480 --display_winsize 512
+```
+    The option '--model test' is used for generating CycleGAN results only for one side.
+    This option will automatically set '--dataset_mode single', which only loads the images from one set.
+    On the contrary, using '--model cycle_gan' requires loading and generating results in both directions,
+    which is sometimes unnecessary. The results will be saved at ./results/.
+    Use '--results_dir <directory_path_to_save_result>' to specify the results directory.
 output path 
 -- ./result/
 
